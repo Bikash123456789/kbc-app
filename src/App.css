@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Open+Sans:wght@300&family=Poppins:ital,wght@0,400;0,500;0,600;1,600;1,700&family=Roboto+Mono:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: aqua;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  height: 100%;
+  width: 100%
+}
+
+
+.app {
+  background-color: red;
+  display: flex;
+
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230), url('./assets/bg.jpg') center no-repeat;
+  background-size: cover;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+
+  width: 100%
+}
+
+.top h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  border: 15px solid white;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+}
+
+.bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+
+  width: 100%;
+  gap: 2rem;
+}
+
+.question {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#100241, black);
+  padding: 1.2rem;
+  border: 2px solid white;
+  font-size: 1rem;
+}
+
+.answers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  background-color: #22074d;
+  border: 1px solid white;
+  border-radius: 15px;
+  font-size: 1rem;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.answer:hover,
+.answer:active {
+  background-color: mediumblue;
+}
+
+.answer.correct {
+  animation: correct 3s forwards ease-in;
+}
+
+@keyframes correct {
+
+  0%,
+  22%,
+  42% {
+    background-color: mediumblue;
+  }
+
+  20%,
+  40%,
+  60% {
+    background-color: #020230;
+  }
+
+  62%,
+  100% {
+    background-color: green;
+  }
+}
+
+.answer.wrong {
+  animation: wrong 3s forwards ease-in;
+}
+
+@keyframes wrong {
+
+  0%,
+  22%,
+  42% {
+    background-color: mediumblue;
+  }
+
+  20%,
+  40%,
+  60% {
+    background-color: #020230;
+  }
+
+  62%,
+  100% {
+    background-color: crimson;
+  }
+}
+
+.money {
+  background-color: #020230;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.8rem;
+
+}
+
+.prize-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0.2rem;
+
+  width: 90%;
+  border-radius: 10px;
+
+}
+
+.prize-item.active {
+  background-color: teal;
+}
+
+.prize-amount {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.prize-id {
+  font-size: 0.7rem;
+  font-weight: 300;
+  width: 40%;
+  margin-left: 20px;
+}
+
+.gameOver {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230), url('./assets/bg.jpg') center no-repeat;
+  background-size: cover;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 1400px) {
+  body {
+    min-height: 100vh;
+  }
+
+  .app {
+    min-height: 100vh;
+    font-size: 1rem;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+
+  .answers {}
+
+  .answer {
+    width: 20%;
+    font-size: 1rem;
+  }
+
+  .prize-item {
+    padding: 10px;
+  }
+
+  .prize-amount {
+    font-size: 1rem;
+  }
+}
+
+.win-game {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230), url('./assets/bg.jpg') center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+.congrats {
+  font-size: 10rem;
+}
